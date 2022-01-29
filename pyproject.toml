@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "requests-default"
-version = "0.1.0"
+version = "0.1"
 description = "Request for default"
 authors = ["geonwoo.kim"]
-readme = "README.rst"
+readme = "README.md"
 homepage = "https://github.com/ultimatelife/requests-default"
 repository = "https://github.com/ultimatelife/requests-default"
 documentation = "https://github.com/ultimatelife/requests-default"
