@@ -1,0 +1,7 @@
+test_report
+.coverage
+.pytest_cache
+.tox
+*/**/.pytest_cache
+.idea
+.mypy_cache
