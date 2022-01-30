@@ -3,8 +3,7 @@ A Requests Session with a base URL.
 """
 from collections import OrderedDict
 from copy import deepcopy
-from typing import Any, Optional
-from urllib.parse import urljoin
+from typing import Any, Optional, Dict
 
 import requests
 from requests.adapters import HTTPAdapter
@@ -21,13 +20,14 @@ class DefaultSession(requests.Session):
 
     Let's start by looking at an example:
     .. code-block:: python
-        >>> from requests_base import DefaultSession
+        # >>> from requests_base import DefaultSession
         >>> session = DefaultSession(base_url='https://example.com/resource/', headers={'api-key': 'aabbcc'})
         >>> r = session.get('sub-resource/', params={'foo': 'bar'})
         >>> print(r.request.url)
     """
-    def __init__(self, url: Optional[str] = None, params: dict = {}, headers: dict = dict,
-                 cookies: dict = {}, timeout: int = None, allow_redirects: bool = True,
+
+    def __init__(self, url: Optional[str] = None, params: Dict[Any, Any] = {}, headers: Dict[Any, Any] = {},
+                 cookies: Dict[Any, Any] = {}, timeout: Optional[int] = None, allow_redirects: bool = True,
                  auth: Optional[AuthBase] = None) -> None:
         self.url = url
 

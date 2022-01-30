@@ -1,7 +1,6 @@
 from copy import deepcopy
 from unittest.mock import patch, MagicMock
 
-import pytest
 import requests
 
 from requests_default import DefaultSession
@@ -17,6 +16,7 @@ defaults: dict = {
         'h': 'h'},
     'timeout': 5,
     'allow_redirects': True,
+    'auth': None,
 }
 ds = DefaultSession(url=default_url, **defaults)
 
